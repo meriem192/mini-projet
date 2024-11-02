@@ -11,7 +11,7 @@ export class ProduitService {
     new Produit(
       '1',
       'Souris Logitech',
-      'assets/images/souris-logitech.jpg',
+      'SOURIS LOGITECH/SOURIS LOGITECH.jpg',
       20,
       true,
       new Date(2024, 9, 1),

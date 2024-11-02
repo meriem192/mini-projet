@@ -14,5 +14,12 @@ export class AuthentifierComponent {
   {
     this.router.navigate(['/home']);  
   }
+  ongoback_office(x:string)
+  {
+    if(x=="ADMIN")
+    {
+      this.router.navigate(['/homeBack']);
+    }
+  }
 
 }

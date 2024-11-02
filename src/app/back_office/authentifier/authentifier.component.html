@@ -14,10 +14,10 @@
               <input type="text" id="username" name="username" required>
             </div>
             <div class="input-group">
-              <label for="password">Mot de passe</label>
-              <input type="password" id="password" name="password" required>
+              <label for="password" >Mot de passe</label>
+              <input type="password" id="password" name="password" #password required>
             </div>
-            <button type="submit" class="login-button">Se connecter</button>
+            <button type="submit" class="login-button" (click)="ongoback_office(password.value)">Se connecter</button>
             <button type="button" class="return-button btn btn-outline-primary" (click)="onreturnhome()">Routerner</button>
           </form>
         </div>
