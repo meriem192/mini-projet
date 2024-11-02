@@ -1,7 +1,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4" style="display:flex;justify-content:space-around;margin:30px">
 @for (item of produit; track $index)
 {
-<div class="card" style="width: 18rem;margin:15px">
+<div class="card" style="width: 18rem;margin:10px">
   <img [src]="item.photo" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{item.categorie | uppercase}}</h5>
