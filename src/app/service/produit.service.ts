@@ -11,7 +11,7 @@ export class ProduitService {
     new Produit(
       '1',
       'Souris Logitech',
-      'SOURIS LOGITECH/SOURIS LOGITECH.jpg',
+      'SOURIS LOGITECH/SOURIS LOGITECH3.jpg',
       20,
       true,
       new Date(2024, 9, 1),
@@ -21,7 +21,7 @@ export class ProduitService {
     new Produit(
       '2',
       'Souris HP',
-      'assets/images/souris-hp.jpg',
+      'SOURIS HP/SOURIS HP.jpg',
       15,
       false,
       new Date(2024, 8, 20),
@@ -31,7 +31,7 @@ export class ProduitService {
     new Produit(
       '3',
       'Baffle JBL',
-      'assets/images/baffle-jbl.jpg',
+      'BAFFLE JBL/BAFFLE JBL.webp',
       50,
       true,
       new Date(2024, 7, 10),
@@ -41,7 +41,7 @@ export class ProduitService {
     new Produit(
       '4',
       'Ordinateur Portable Dell',
-      'assets/images/pc-dell.jpg',
+      'ORDINATEUR PORTABLE DELL/ORDINATEUR PORTABLE DELL.jpg',
       700,
       true,
       new Date(2024, 6, 15),
@@ -51,7 +51,7 @@ export class ProduitService {
     new Produit(
       '5',
       'Ordinateur Portable HP',
-      'assets/images/pc-hp.jpg',
+      'ORDINATEUR PORTABLE HP/ORDINATEUR PORTABLE HP.jpg',
       650,
       false,
       new Date(2024, 5, 25),
@@ -61,7 +61,7 @@ export class ProduitService {
     new Produit(
       '6',
       'Clavier mécanique Corsair',
-      'assets/images/clavier-corsair.jpg',
+      'CLAVIER MÉCANIQUE CORSAIR/CLAVIER MÉCANIQUE CORSAIR.jpg',
       120,
       true,
       new Date(2024, 9, 5),
@@ -71,7 +71,7 @@ export class ProduitService {
     new Produit(
       '7',
       'Écran Samsung 24 pouces',
-      'assets/images/ecran-samsung.jpg',
+      'ÉCRAN SAMSUNG 24 POUCES/ÉCRAN SAMSUNG 24 POUCES.jpg',
       180,
       true,
       new Date(2024, 8, 18),
@@ -81,7 +81,7 @@ export class ProduitService {
     new Produit(
       '8',
       'Casque Audio Sony',
-      'assets/images/casque-sony.jpg',
+      'CASQUE AUDIO SONY/CASQUE AUDIO SONY.jpg',
       80,
       false,
       new Date(2024, 7, 22),
@@ -91,7 +91,7 @@ export class ProduitService {
     new Produit(
       '9',
       'Imprimante Canon',
-      'assets/images/imprimante-canon.jpg',
+      'IMPRIMANTE CANON/IMPRIMANTE CANON.webp',
       250,
       true,
       new Date(2024, 6, 8),
@@ -101,7 +101,7 @@ export class ProduitService {
     new Produit(
       '10',
       'Disque Dur Externe Seagate 1TB',
-      'assets/images/disque-seagate.jpg',
+      'DISQUE DUR EXTERNE SEAGATE 1TB/DISQUE DUR EXTERNE SEAGATE 1TB.jpg',
       60,
       true,
       new Date(2024, 5, 1),
