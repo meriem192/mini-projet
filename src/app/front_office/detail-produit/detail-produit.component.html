@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+    <div class="card" style="width: 24rem; margin: 30px;">
+      <img [src]="produitSelectionne.photo" class="card-img-top" alt="imgProduit" style="width: 80%; margin: 0 auto;">
+      <div class="card-body">
+        <h5 class="card-title">{{produitSelectionne.nom}}</h5>
+        <p class="card-text">{{produitSelectionne.description}}</p>
+        <span>Prix: {{produitSelectionne.prix}} DT</span>
+        <button class="btn btn-link" (click)="onAfficher()">Afficher les commentaires</button>
+        @if(test) {
+          @for(cmt of produitSelectionne.comments; track $index) {
+            <p>{{cmt.nom}} : {{cmt.message}}</p>
+          }
+        }
+        <button class="btn btn-light" (click)="navigateToHome()">Retour à la page d'accueil</button>
+      </div>
+    </div>
+  </div>
+
+  
+  

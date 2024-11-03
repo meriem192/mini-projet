@@ -1,21 +1,26 @@
-import { Component,inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+
+import { ProduitComponent } from '../produit/produit.component';
 import { Produit } from '../../model/produit';
 import { ProduitService } from '../../service/produit.service';
-import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [UpperCasePipe],
+  imports: [ProduitComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
-})
+})  
 export class HomeComponent implements OnInit {
-  produit!:Produit[];
-  produitservice:ProduitService=inject(ProduitService);
-  ngOnInit(): void {
-      this.produit=this.produitservice.getProduit();
-  }
 
+
+  produits:Produit[]=[];
+  private produitService:ProduitService=inject(ProduitService);
+  ngOnInit(): void {
+    this.produits=this.produitService.getProduits();
+  }
+  
+  
+    
 
 }

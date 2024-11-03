@@ -11,4 +11,5 @@ import { MenuComponent } from "./menu/menu.component";
 })
 export class AppComponent {
   title = 'mini-projet';
+
 }

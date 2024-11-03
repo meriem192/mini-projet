@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component,inject } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,RouterLinkActive],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
+router:Router=inject(Router);
+  onNavigateToAuth() {
+    this.router.navigate(["authentification"]);
+}
 
 }

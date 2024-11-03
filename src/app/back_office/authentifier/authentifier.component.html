@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="c">
-          <h2>Connexion Fournisseur</h2>
-          <form action="#" method="POST">
-            <div class="input-group">
-              <label for="username">Identifiant</label>
-              <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-              <label for="password" >Mot de passe</label>
-              <input type="password" id="password" name="password" #password required>
-            </div>
-            <button type="submit" class="login-button" (click)="ongoback_office(password.value)">Se connecter</button>
-            <button type="button" class="return-button btn btn-outline-primary" (click)="onreturnhome()">Routerner</button>
-          </form>
-        </div>
-    
-</body>
-</html>
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <form class="w-50 shadow p-4" style="background-color: #f8f9fa; border-radius: 8px;">
+    <h2 class="text-center mb-4">Connexion</h2>
+
+    <div class="form-group">
+      <mat-form-field appearance="fill" class="w-100" >
+        <mat-label >Nom d'utilisateur</mat-label>
+        <input matInput class="form-control" placeholder="Entrez votre nom d'utilisateur" required>
+      </mat-form-field>
+    </div>
+  
+    <div class="form-group">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label >Entrez votre mot de passe</mat-label>
+        <input matInput [type]="hide() ? 'password' : 'text'" #password class="form-control" 
+               placeholder="Entrez votre mot de passe" required/>
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()"
+        >
+          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  
+    <button type="submit" class="btn btn-primary login-button w-100" (click)="ongoback_office(password.value)">Se connecter</button>
+    <button type="button" class="btn btn-outline-primary return-button w-100 mt-2" (click)="onreturnhome()">Retourner</button>
+  </form>
+</div>

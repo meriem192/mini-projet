@@ -1,5 +1,11 @@
-nav{
+nav {
+    background-color: #7ab2d3;
+    height: 100px;
+  }
+  .btn-Admin {
+    padding: 6px;
     display: flex;
-    flex-direction: row;
-}
-
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+  }

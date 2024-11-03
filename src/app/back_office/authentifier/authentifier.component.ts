@@ -1,25 +1,40 @@
-import { Component,inject } from '@angular/core';
+import { Component,inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
+import {MatIconModule} from '@angular/material/icon';
+
 
 @Component({
   selector: 'app-authentifier',
   standalone: true,
-  imports: [],
+  imports: [MatFormFieldModule,MatInputModule,MatIconModule],
   templateUrl: './authentifier.component.html',
   styleUrl: './authentifier.component.css'
 })
 export class AuthentifierComponent {
-  router:Router=inject(Router);
-  onreturnhome()
-  {
-    this.router.navigate(['/home']);  
-  }
-  ongoback_office(x:string)
-  {
-    if(x=="ADMIN")
-    {
-      this.router.navigate(['/homeBack']);
+ 
+    
+  
+    hide = signal(true);
+    clickEvent(event: MouseEvent) {
+      this.hide.set(!this.hide());
+      event.stopPropagation();
     }
-  }
+    router:Router=inject(Router);
+    onreturnhome()
+    {
+      this.router.navigate(['/home']);  
+    }
+    x:boolean=true;
+    ongoback_office(x:string)
+    {
+      if(x=="ADMIN")
+      {
+        this.router.navigate(['/homeBack']);
+       
+      }
+    }
 
 }
