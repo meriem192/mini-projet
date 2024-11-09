@@ -32,7 +32,7 @@ export class DetailProduitComponent {
     }
   
     navigateToHome() {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/front_princ']);
       }
  
 

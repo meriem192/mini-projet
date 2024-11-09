@@ -14,6 +14,6 @@ export class ProduitComponent {
   
   router:Router=inject(Router);
   onNavigateToDetails(id:string) { 
-    this.router.navigate(['/DetailsProduit',id]);
+    this.router.navigate(['/front_princ/DetailsProduit',id]);
 
 }}

@@ -1,32 +1,31 @@
-<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
-  <form class="w-50 shadow p-4" style="background-color: #f8f9fa; border-radius: 8px;">
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <form class="form-custom w-50 shadow p-4 bg-light rounded" >
     <h2 class="text-center mb-4">Connexion</h2>
 
-    <div class="form-group">
+    <div class="form-group m-2">
       <mat-form-field appearance="fill" class="w-100" >
         <mat-label >Nom d'utilisateur</mat-label>
         <input matInput class="form-control" placeholder="Entrez votre nom d'utilisateur" required>
       </mat-form-field>
     </div>
-  
-    <div class="form-group">
+
+    <div class="form-group mb-3" sty>
       <mat-form-field appearance="fill" class="w-100">
-        <mat-label >Entrez votre mot de passe</mat-label>
-        <input matInput [type]="hide() ? 'password' : 'text'" #password class="form-control" 
+        <mat-label>Entrez votre mot de passe</mat-label>
+        <input matInput [type]="hide() ? 'password' : 'text'" #password class="form-control"
                placeholder="Entrez votre mot de passe" required/>
         <button
           mat-icon-button
           matSuffix
           (click)="clickEvent($event)"
           [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hide()"
-        >
+          [attr.aria-pressed]="hide()">
           <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
     </div>
-  
-    <button type="submit" class="btn btn-primary login-button w-100" (click)="ongoback_office(password.value)">Se connecter</button>
-    <button type="button" class="btn btn-outline-primary return-button w-100 mt-2" (click)="onreturnhome()">Retourner</button>
+
+    <button type="submit" class="btn btn-primary btn-block" (click)="ongoback_office(password.value)">Se connecter</button>
+    <button type="button" class="btn btn-outline-primary btn-block mt-2" (click)="onreturnhome()">Retourner</button>
   </form>
 </div>
