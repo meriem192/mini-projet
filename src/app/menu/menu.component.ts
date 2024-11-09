@@ -11,7 +11,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 export class MenuComponent {
 router:Router=inject(Router);
   onNavigateToAuth() {
-    this.router.navigate(["authentification"]);
+    this.router.navigate(["/front_princ/authentifier"]);
 }
 
 }

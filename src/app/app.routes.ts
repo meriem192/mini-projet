@@ -9,21 +9,28 @@ import { FrontPrincComponent } from './front_office/front-princ/front-princ.comp
 import { BackPrincComponent } from './back_office/back-princ/back-princ.component';
 
 export const routes: Routes =
-[ { path: 'front_princ', component: FrontPrincComponent, 
-   children: [
-       { path: 'home', component: HomeComponent },
-   { path: 'DetailsProduit/:id', component: DetailProduitComponent } ]},
-   { path: 'back-princ', component: BackPrincComponent, 
+   [{
+      path: 'front_princ', component: FrontPrincComponent,
       children: [
-      { path: 'nav-back', component: NavBackComponent },
-      { path: 'home-back', component: HomeBackComponent } ]},
-    {path:'front_princ/home',title:"front_princ/home", component:HomeComponent},
-    {path: 'front_princ/DetailsProduit/:id',title:"Détail du produit", component:DetailProduitComponent},
-    {path:'authentification',title:"authentification", component:AuthentifierComponent},
-    {path:'menuBack',title:"manuBack", component:NavBackComponent},
-    {path:'',redirectTo:'front_princ/home',pathMatch:'full'},
-    {path:'homeBack',title:"homeBack", component:HomeBackComponent},
-    {path:'**',title:'error',component:ErrorComponent}
+         { path: 'home', component: HomeComponent },
+         { path: 'DetailsProduit/:id', component: DetailProduitComponent },
+         { path: 'authentifier', component: AuthentifierComponent }
 
-    
- ];
+      ]
+   },
+   {
+      path: 'back-princ', component: BackPrincComponent,
+      children: [
+         { path: 'navBack', component: NavBackComponent },
+         { path: 'homeBack', component: HomeBackComponent }]
+   },
+   { path: 'front_princ/home', title: "front_princ/home", component: HomeComponent },
+   { path: 'front_princ/DetailsProduit/:id', title: "Détail du produit", component: DetailProduitComponent },
+   { path: 'authentification', title: "authentification", component: AuthentifierComponent },
+   { path: 'menuBack', title: "manuBack", component: NavBackComponent },
+   { path: '', redirectTo: 'front_princ/home', pathMatch: 'full' },
+   { path: 'homeBack', title: "homeBack", component: HomeBackComponent },
+   { path: '**', title: 'error', component: ErrorComponent }
+
+
+   ];

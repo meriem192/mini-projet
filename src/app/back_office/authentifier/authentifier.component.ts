@@ -25,14 +25,14 @@ export class AuthentifierComponent {
     router:Router=inject(Router);
     onreturnhome()
     {
-      this.router.navigate(['/home']);  
+      this.router.navigate(['/front_princ/home']);  
     }
     x:boolean=true;
     ongoback_office(x:string)
     {
       if(x=="ADMIN")
       {
-        this.router.navigate(['/homeBack']);
+        this.router.navigate(['/back-princ/homeBack']);
        
       }
     }
